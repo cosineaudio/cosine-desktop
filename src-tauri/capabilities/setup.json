@@ -1,0 +1,6 @@
+{
+  "identifier": "connection-screen",
+  "description": "Only the bundled connection window can read or change the server.",
+  "windows": ["setup"],
+  "permissions": ["allow-connection-settings", "allow-connect-server"]
+}

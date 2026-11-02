@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "cosine",
+  "version": "0.1.0",
+  "identifier": "audio.cosine.desktop",
+  "build": { "frontendDist": "../ui" },
+  "app": {
+    "enableGTKAppId": true,
+    "withGlobalTauri": true,
+    "windows": [],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src ipc: http://ipc.localhost; object-src 'none'; base-uri 'none'; frame-src 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "publisher": "cosine",
+    "homepage": "https://github.com/cosineaudio/cosine-desktop",
+    "license": "AGPL-3.0-only",
+    "copyright": "cosine contributors",
+    "targets": ["deb", "rpm"],
+    "category": "Music",
+    "shortDescription": "cosine music player",
+    "longDescription": "A lightweight Tauri desktop client for your cosine music server, using the original web player and native Linux media controls.",
+    "resources": { "../LICENSE": "licenses/LICENSE", "../licenses/Outfit-OFL.txt": "licenses/Outfit-OFL.txt", "../licenses/Inter-OFL.txt": "licenses/Inter-OFL.txt", "../THIRD_PARTY_NOTICES.md": "licenses/THIRD_PARTY_NOTICES.md" },
+    "icon": ["icons/icon.png", "icons/16x16.png", "icons/24x24.png", "icons/32x32.png", "icons/48x48.png", "icons/64x64.png", "icons/128x128.png", "icons/128x128@2x.png"],
+    "linux": {
+      "deb": {
+        "depends": ["libwebkit2gtk-4.1-0", "gstreamer1.0-plugins-good", "gstreamer1.0-libav"],
+        "desktopTemplate": "../packaging/linux/cosine.desktop.hbs",
+        "files": { "/usr/share/icons/hicolor/scalable/apps/cosine-desktop.svg": "../assets/cosine.svg" }
+      },
+      "rpm": {
+        "depends": ["webkit2gtk4.1", "gstreamer1-plugins-good", "gstreamer1-libav"],
+        "desktopTemplate": "../packaging/linux/cosine.desktop.hbs",
+        "files": { "/usr/share/icons/hicolor/scalable/apps/cosine-desktop.svg": "../assets/cosine.svg" }
+      }
+    }
+  }
+}

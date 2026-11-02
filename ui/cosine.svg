@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="13" fill="#0a0a0a"/>
+  <!-- 1.5 cosine periods, starting at a peak like cos(0) = 1 -->
+  <path d="M 10 21 C 16 21 18.67 43 24.67 43 C 30.67 43 33.33 21 39.33 21 C 45.33 21 48 43 54 43"
+        fill="none" stroke="#ffffff" stroke-width="5.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>connect · cosine</title>
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" type="image/svg+xml" href="cosine.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="setup.js" defer></script>
+</head>
+<body>
+  <main>
+    <img src="cosine.svg" width="48" height="48" alt="">
+    <p class="label">Self-hosted · Linux desktop</p>
+    <h1>cosine</h1>
+    <p class="intro">Your music. Your server.</p>
+    <form id="connection">
+      <label for="server">Server address</label>
+      <input id="server" type="url" placeholder="https://music.example.com" required autofocus autocomplete="url" spellcheck="false" autocapitalize="none" aria-describedby="server-hint status">
+      <p class="hint" id="server-hint">Use the same address you open in your browser.</p>
+      <button id="connect" type="submit">Connect</button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="footnote">Connect to your cosine server, then sign in to start listening.</p>
+  </main>
+</body>
+</html>
